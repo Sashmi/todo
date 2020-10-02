@@ -1,0 +1,18 @@
+<!-- <div class="row"> -->
+        <!-- <ul class="col col-6 mx-auto"> -->
+            <!-- <% for(var i=0;i<list.length; i++){  %>  -->
+                <!-- <li><%= list[i] %></li>   -->
+            <!-- <% }  %>  -->
+
+        <!-- </ul> -->
+    <!-- </div> -->
+
+
+
+    <ul class="col col-6 mx-auto"> 
+            <% for(var i=0;i<list.length; i++){  %>  
+                <input type="checkbox" name="checkbox" value="<%=list[i]._id%>" onChange="this.form.submit()">
+                <li><%= list[i].todos %></li>   
+             <% }  %> 
+
+        </ul> 

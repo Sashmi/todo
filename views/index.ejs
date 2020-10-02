@@ -1,0 +1,34 @@
+<%- include("header") -%>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">ToDoList</a>
+
+    </nav> 
+    <div class="container">
+        <row> 
+            <h1 class="text-center">FILL THE WORKS</h1>
+            <form class="col col-6 mx-auto" action="/" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="item" placeholder="enter the list" value=" "><span> <button class="btn btn-primary" type="submit">ENTER</button></span>
+
+                </div>
+            </form>
+        </row>
+
+    </div>
+
+    <div class="row"> 
+
+        <ul class="col col-6 mx-auto"> 
+            <% for(var i=0;i<list.length; i++){  %>  
+                <div style="display: flex; font-size: large; ">
+                    <input type="checkbox" name="checkbox" value="<%=list[i]._id%>" onChange="this.form.submit()">
+                    <p><%= list[i].todos %></p>  
+                </div>
+                
+             <% }  %> 
+
+        </ul> 
+     </div>
+    
+</body>
+</html>

@@ -1,0 +1,4 @@
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: black;
+  }
